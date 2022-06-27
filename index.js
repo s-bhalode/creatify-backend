@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 const app = express();
 app.use(express.json());
-require('./src/server/database/connection');
+//require('./src/server/database/connection');
 
 dotenv.config({path : './config.env'});
 const PORT = process.env.PORT;
