@@ -13,4 +13,6 @@ module.exports = function(app) {
 
   app.get("/api/test/admin", [authJwt.verifyToken, authJwt.isAdmin], controller.adminDasboard);
 
+  app.get("/users/:id" + "/profile-settings", controller.find);
+
 }
