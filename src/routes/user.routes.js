@@ -13,4 +13,8 @@ module.exports = function(app) {
 
   app.get("/api/test/admin", [authJwt.verifyToken, authJwt.isAdmin], controller.adminDasboard);
 
+  app.get("/users/:id" + "/profile-settings", controller.find);//designer-profile-settings edit-profile (fetching)
+
+  app.put("/users/:id" + "/profile-settings", controller.update )//designer-profile-settings edit-profile (updating)
+
 }
