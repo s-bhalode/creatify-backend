@@ -26,6 +26,9 @@ module.exports = function(app) {
 
 
 
+  // common user routes
+  app.get("/users/:id" + "/profile-settings", controller.find);//designer-profile-settings edit-profile (fetching)
+  app.put("/users/:id" + "/profile-settings", controller.update )//designer-profile-settings edit-profile (updating)
 
 
 }

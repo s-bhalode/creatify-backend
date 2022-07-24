@@ -19,6 +19,15 @@ const User = mongoose.model(
         role : {
             type : String,
             required : true
+        },
+        bio : {
+            type : String
+        },
+        skills : {
+            type : String
+        },
+        portfolio_url : {
+            type : String
         }
     })
 );
