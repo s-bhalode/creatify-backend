@@ -13,4 +13,8 @@ mongoose.connect(process.env.MONGO_URL, {
     process.exit();
 })
 
-
+module.exports = {
+     url : process.env.MONGO_URL ,
+     database : "Creatify",
+     imgBucket : "photos"
+}
