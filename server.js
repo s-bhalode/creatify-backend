@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-
+const mongoClient = require('mongodb').mongoClient;
 const app = express();
 
 dotenv.config({path : './config.env'});
@@ -17,11 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
 require('./src/config/dbConnection');
-
-//simple route
-// app.get('/', (req, res) => {
-//     res.json({message : "Hello Creators!!"})
-// });
+require('./src/config/cloudinary');
 
 app.use((req, res, next) => {
         res.header(
